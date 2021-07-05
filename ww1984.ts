@@ -47,9 +47,9 @@ const turns = [
 namespace ww {
 
     /**
-     * Move Wonder Woman n spaces in the d direction
+     * Wonder Woman przejdzie n kroków w kierunku d
      */
-    //% block="Przesuń %d o %n"
+    //% block="Idź %d %n kroków"
     export function moveWW(d: Direction, n: number): void {
         for (let i = 0; i < n; i++){
             if(shouldStop()) return;
@@ -61,7 +61,7 @@ namespace ww {
     }
 
     /**
-     * Turn Wonder Woman in the t direction
+     * Obraca Wonder Woman w kierunku t
      */
     //% block="Obróć %t"
     export function turnWW(t: TurnDirection): void {
@@ -73,7 +73,7 @@ namespace ww {
     }  
 
     /**
-     * Place block in the d direction
+     * Umieszcza blok w podanym kierunku d
      * @param block the block
      */    
     //% block="Umieść %block %d"
@@ -89,9 +89,9 @@ namespace ww {
     }  
 
     /**
-     * Inspect in the d direction for the painting
+     * Sprawdza występowanie obrazu w ustalonym kierunku d
      */
-    //% block="obraz wewnątrz skrzyni %d"
+    //% block="obraz w skrzyni %d"
     export function locatePainting(d: Direction): boolean {
         if(shouldStop()) return false;
 
@@ -103,7 +103,7 @@ namespace ww {
     }
 
     /**
-     * Break the block in the d direction
+     * Rozbija blok w ustalonym kierunku d
      */
     //% block="Rozbij skrzynię %d"
     export function retrievePainting(d: Direction): void {
@@ -115,7 +115,7 @@ namespace ww {
     }    
 
     /**
-     * Inspect in the d direction for Goon
+     * Sprawdza występowanie zbira w ustalonym kierunku d
      */
     //% block="uczestnik jest złodziejem %d"
     export function locateGoon(d: Direction): boolean {
@@ -129,7 +129,7 @@ namespace ww {
     }
 
     /**
-     * Inspect in the d direction for GOLD_BLOCK
+     * Używa lassa do złapania postaci w ustalonym kierunku d
      */
     //% block="Łap lassem złodzieja %d"
     export function apprehendGoon(d: Direction): void {
@@ -141,7 +141,7 @@ namespace ww {
     }
 
     /**
-     * Inspect in the d direction for GOLD_BLOCK
+     * Bezszelestnie atakuje postać w ustalonym kierunku d
      */
     //% block="Atakuj przestępcę %d"
     export function takedownGoon(d: Direction): void {
