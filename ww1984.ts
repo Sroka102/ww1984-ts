@@ -2,7 +2,7 @@
 enum Direction {
     //% block="do Przodu"
     Forward,
-    //% block="w Tył"
+    //% block="do Tyłu"
     Back,
     //% block="w Lewo"
     Left,
